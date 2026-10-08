@@ -1,13 +1,11 @@
 <?php
-$conexao = mysqli_connect("localhost", "root", "", "VivaVerde");
+$conexao = mysqli_connect("localhost", "root", "", "VivaVerde",3307);
 
 if (!$conexao) {
     die("Erro ao conectar ao banco de dados.");
 }
 
 /* Configura caracteres especiais */
-mysqli_set_charset($conexao,"utf8mb4")
-
-
+mysqli_set_charset($conexao, "utf8mb4")
 
 ?>
