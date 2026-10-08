@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verde Viva | Plantas & Jardinagem</title>
+    <!-- Para conectar ao bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Para colocar icones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Conecção com style css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NAVBAR in ------------------------------------------------------------------------------------>
+    <!-- corNav conecta ao css -->
+    <nav class="navbar navbar-expand-lg navbar-dark corNav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="bi bi-flower1 me-2"></i>Verde Viva</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active " aria-current="page" href="#inicio">Incio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active " aria-current="page" href="#categoria">Categoria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active " aria-current="page" href="#produtos">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active " aria-current="page" href="#duvidas">Dúvidas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#contatos">Contatos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+        <!-- CAROUSEL in ------------------------------------------------------------------------------>
+        <section id="inicio">
+
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner bg-dark">
+                    <!-- Carousel 01 ------------------------------------->
+                    <div class="carousel-item active bg-success text-white text-center p-5">
+                        <!-- d-inline-block" style="transform: scaleX(-1) para inverter o icone -->
+                        <h1><i class="bi bi-leaf me-3 fs-1 "></i>Deixe sua casa mais verde.<i
+                                class="bi bi-leaf ms-3 fs-1 d-inline-block" style="transform: scaleX(-1)"></i></h1>
+                        <p class="fs-5">Platas selecionadas para transformar seus ambientes.</p>
+                        <a href="#produtos" class="btn btn-light"><i class="bi bi-dice-1-fill me-2 fs-5"></i>Produtos<i
+                                class="bi bi-dice-1 ms-2 fs-5"></i></a>
+
+                    </div>
+
+                    <!-- Carousel 02 ------------------------------------->
+                    <div class="carousel-item bg-warning text-dark text-center p-5">
+                        <h1><i class="bi bi-tree me-3 fs-1"></i>Semana dos vasos.<i class="bi bi-tree ms-3 fs-1"></i>
+                        </h1>
+                        <p class="fs-5">Ofertas especiais em vasos e acessórios.</p>
+                        <a href="#produtos" class="btn btn-dark"><i class="bi bi-dice-2-fill me-2 fs-5"></i>Ofertas<i
+                                class="bi bi-dice-2 ms-2 fs-5"></i></a>
+                    </div>
+
+
+                    <!-- Carousel 03 ------------------------------------->
+                    <div class="carousel-item bg-danger text-white text-center p-5">
+                        <!-- d-inline-block" style="transform: scaleX(-1) para inverter o icone -->
+                        <h1><i class="bi bi-moon-stars me-3 fs-1"></i>Compre com Saga.<i
+                                class="bi bi-moon-stars ms-3 fs-1 d-inline-block" style="transform: scaleX(-1)"></i>
+                        </h1>
+                        <p class="fs-5">Ofertas especiais em explosões galáticas.</p>
+                        <a href="#produtos" class="btn bg-white text-danger"><i
+                                class="bi bi-dice-3-fill me-2 fs-5"></i>Gêmeos<i class="bi bi-dice-3 ms-2 fs-5"></i></a>
+                    </div>
+
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <!-- Retirei (carousel-control-prev-icon) para por <i> -->
+                    <span class="" aria-hidden="true"><i class="bi bi-caret-left-square fs-1"></i></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <!-- Retirei (carousel-control-prev-icon) para por <i> -->
+                    <span class="" aria-hidden="true"><i class="bi bi-caret-right-square fs-1"></i></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+
+        </section>
+
+        <!-- ALERTA in -------------------------------------------------------------------------------->
+        <section class="container mt-4">
+            <div class="alert alert-success text-center" role="alert">
+                <strong><i class="bi bi-truck me-3 fs-4 "></i>Frete Grátis </strong>para compras acima de R$ 150,00.
+            </div>
+        </section>
+
+        <!-- CARD CATEGORIAS in ----------------------------------------------------------------------->
+        <section class="container text-center mt-5" id="categoria">
+            <!-- Titulo -->
+            <div>
+                <h2 class="fw-bold">Nossas Categorias</h2>
+                <p class="text-secondary pb-4">Encontre tudo o que precisa para deixar seu espaço mais verde.</p>
+            </div>
+
+            <div class="row mb-5">
+                <!-- CARD01 -->
+                <div class="col col-md">
+
+                    <!----------------------->
+                    <div class="card pb-2" style="width: 18rem;">
+                        <div class="card-body">
+                            <i class="bi bi-flower1 fs-1 text-success"></i>
+                            <h5 class="card-title">Plantas</h5>
+                            <p class="card-text">Para ambientes internos e externos.</p>
+                            <p> </p>
+
+                        </div>
+                    </div>
+                    <!----------------------->
+
+                </div>
+                <!-- CARD02 -->
+                <div class="col col-md">
+                    <!----------------------->
+                    <div class="card pb-2" style="width: 18rem;">
+                        <div class="card-body">
+                            <i class="bi bi-basket fs-1 text-success"></i>
+                            <h5 class="card-title">Vasos</h5>
+                            <p class="card-text">Vasos decorativos.</p>
+                            <p> </p>
+
+                        </div>
+                    </div>
+                    <!----------------------->
+                </div>
+                <!-- CARD03 -->
+                <div class="col col-md">
+                    <!----------------------->
+                    <div class="card " style="width: 18rem;">
+                        <div class="card-body">
+                            <i class="bi bi-tools fs-1 text-success"></i>
+                            <h5 class="card-title">Ferramentas</h5>
+                            <p class="card-text">Ferramentas para cuidar do seu jardim.</p>
+                        </div>
+                    </div>
+                    <!----------------------->
+                </div>
+                <!-- CARD04 -->
+                <div class="col col-md">
+                    <!----------------------->
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <i class="bi bi-droplet fs-1 text-success"></i>
+                            <h5 class="card-title">Acessórios</h5>
+                            <p class="card-text">Produtos para facilitar os cuidados diários.</p>
+                        </div>
+                    </div>
+                    <!----------------------->
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CARD PRODUTOS ---------------------------------------------------------------------------->
+        <!-- section produtoCor em css -->
+        <section class="container-fluid text-center p-1 produtoCor">
+            <div class="container">
+                <!-- Título -->
+                <div class="mt-5" id="produtos">
+                    <h2 class="fw-bold">Produtos em Destaque</h2>
+                    <p class="text-secondary pb-4">Conheça alguns dos produtos selecionados pela Verde Viva.</p>
+                </div>
+
+                <div class="row pb-5 g-3">
+                    <div class="col col-mg">
+                        <!-- produto 01 ----------------------------->
+                        <div class="card mx-auto" style="width: 18rem;">
+                            <img src="img/planta1.jpg" class="card-img-top" style="height: 220px; object-fit: cover;">
+                            <div class="card-body">
+                                <span class="badge text-bg-danger">Ofertas</span>
+                                <h5 class="card-title pt-3">Costela de Adão</h5>
+                                <p class="card-text">Planta ornamental ideal para ambientes internos e decoração.</p>
+
+                                <!-- Preço Antigo -->
+                                <p class="text-secondary text-decoration-line-through mb-0">R$ 99,90</p>
+
+                                <!-- Preço atual -->
+                                <h4 class="text-success">R$ 79,90</h4>
+
+                                <div>
+                                    <button type="button" class="btn btn-outline-success w-100" data-bs-toggle="modal"
+                                        data-bs-target="#detalhesProduto">
+
+                                        <i class="bi bi-eye me-1"></i>
+                                        Ver detalhes
+                                    </button>
+                                    <a href="https://wa.me/5534955884411?text=Olá%20tenho%20interesse%20na%20costela%20de%20Adão."
+                                        target="_blank" class="btn btn-success w-100 mt-2">
+                                        <i class="bi bi-whatsapp"></i>
+                                        Comprar pelo WhatsApp
+                                    </a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!--  --------------------------------------->
+
+                    </div>
+
+
+                    <div class="col col-mg ">
+                        <!-- produto 02 ----------------------------->
+                        <div class="card mx-auto" style="width: 18rem;">
+                            <img src="img/planta2.jpg" class="card-img-top" style="height: 220px; 
+                            object-fit: cover;">
+                            <div class="card-body">
+                                <span class="badge text-bg-success ms-auto">Mais vendido</span>
+                                <h5 class="card-title pt-3">Espada-de-São-Jorge</h5>
+                                <p class="card-text">Planta de fácil manutenção para diversos ambientes.</p>
+
+                                <!-- Preço Antigo -->
+                                <p class="text-secondary text-decoration-line-through mb-0">R$ 59,90</p>
+
+                                <!-- Preço atual -->
+                                <h4 class="text-success">R$ 49,90</h4>
+
+                                <div>
+                                    <button type="button" class="btn btn-outline-success w-100" data-bs-toggle="modal"
+                                        data-bs-target="#detalhesProduto">
+
+                                        <i class="bi bi-eye me-1"></i>
+                                        Ver detalhes
+                                    </button>
+                                    <a href="https://wa.me/5534955884411?text=Olá%20tenho%20interesse%20na%20costela%20de%20Adão."
+                                        target="_blank" class="btn btn-success w-100 mt-2">
+                                        <i class="bi bi-whatsapp"></i>
+                                        Comprar pelo WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  --------------------------------------->
+
+                    </div>
+
+
+                    <div class="col col-mg">
+                        <!-- produto 03 ----------------------------->
+                        <div class="card mx-auto" style="width: 18rem;">
+                            <img src="img/planta3.jpg" class="card-img-top" alt="..."
+                                style="height: 220px; object-fit: cover;">
+                            <div class="card-body">
+                                <span class="badge text-bg-warning">Novidade</span>
+                                <h5 class="card-title pt-3">Kit Jardinagem</h5>
+                                <p class="card-text">Kit básico com ferramentas para manutenção de vasos e jardins.</p>
+
+                                <!-- Preço Antigo -->
+                                <p class="text-secondary text-decoration-line-through mb-0">R$ 99,90</p>
+
+                                <!-- Preço atual -->
+                                <h4 class="text-success">R$ 89,90</h4>
+
+                                <div>
+                                    <button type="button" class="btn btn-outline-success w-100" data-bs-toggle="modal"
+                                        data-bs-target="#detalhesProduto">
+
+                                        <i class="bi bi-eye me-1"></i>
+                                        Ver detalhes
+                                    </button>
+                                    <a href="https://wa.me/5534955884411?text=Olá%20tenho%20interesse%20na%20costela%20de%20Adão."
+                                        class="btn btn-success w-100 mt-2">
+                                        <i class="bi bi-whatsapp"></i>
+                                        Comprar pelo WhatsApp
+                                    </a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!--  --------------------------------------->
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+        </section>
+
+        <!-- MODAL PRODUTOS --------------------------------------------------------------------------->
+        <section>
+            <div class="modal" tabindex="-1" id="detalhesProduto">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Costela de Adão</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>Ambiente: </strong>Interno</p>
+                            <p><strong>Iluminação: </strong>Luz indireta</p>
+                            <p><strong>Rega: </strong>Aproximadamente duas vezes por semana.</p>
+                            <p><strong>Tamanho: </strong>Aproximadamente 60 cm. </p>
+                            <p><strong>Preço: </strong>R$ 79,90</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                            <a href="https://wa.me/5534955884411?text=Olá%20tenho%20interesse%20na%20costela%20de%20Adão."
+                                target="_blank" class="btn btn-success mt-2">
+                                <i class="bi bi-whatsapp"></i>
+                                Comprar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ACCORDION--------------------------------------------------------------------------------->
+        <section class="container mb-5">
+            <!--  -------------------------->
+            <!-- Título -->
+            <div class="container text-center mt-5" id="duvidas">
+                <!-- Titulo -->
+                <div class="mt-5" id="produtos">
+                    <h2 class="fw-bold">Perguntas frequentes</h2>
+                </div>
+            </div>
+
+            <!-- Accordion Itens ------------------------->
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+
+                <!-- collapseOne ------------------------->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Vocês realizam entregas ?
+                        </button>
+                    </h2>
+                    <!-- Resposta 1 -->
+                    <div id="flush-collapseOne" class="accordion-collapse collapse text-center"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            Sim. Consulte nossa equipe pelo WhatsApp para verificar a disponibilidade e verificar.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- collapseTwo ------------------------->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Como escolher uma planta ?
+                        </button>
+                    </h2>
+                    <!-- Resposta 2 -->
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse text-center"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Nossa equipe pode indicar plantas considerando a iluminação, espaço
+                            disponivel e sua rotina de cuidados.</div>
+                    </div>
+                </div>
+
+                <!-- collapseThree ------------------------->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            Quais são as formas de pagamento ?
+                        </button>
+                    </h2>
+                    <!-- Resposta 3 -->
+                    <div id="flush-collapseThree" class="accordion-collapse collapse text-center"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Entre em contato com a nossa equipe para consultar as formas de
+                            pagamento disponiveis para seu pedido.</div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!--  -------------------------->
+        </section>
+
+        <!-- FORMULARIO -->
+        <section class="pb-5 produtoCor" id="contatos">
+            <div class="container mt-5 pt-2" id="contato">
+                <!-- Titulo -->
+                <div class="text-center">
+                    <h2 class="mt-5 fw-bold">Entre em Contato</h2>
+                    <p class="text-secondary">Envie sua dúvida para nossa equipe.</p>
+                </div>
+ 
+                <div class="row justify-content-center tec">
+                    <div class="col-12 col-md-6">
+                        <form action="cadastroContato.php" method="POST">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Nome</label>
+                                <input type="text" name="nome" class="form-control" id="nome"
+                                    placeholder="Entre com o seu nome completo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                                <input type="text" name="email" class="form-control" id="email"
+                                    placeholder="nome@email.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Telefone</label>
+                                <input type="number" name="telefone" class="form-control" id="telefone"
+                                    placeholder="(XX) XXXX-XXXX" required>
+                            </div>
+ 
+                            <label for="exampleFormControlInput1" class="form-label">Dúvidas</label>
+                            <select name="assunto" id="assunto" class="form-select">
+                                <option value="Produto">Dúvida sobre produto</option>
+                                <option value="Entrega">Entrega</option>
+                                <option value="Pagamento">Pagamento</option>
+                            </select>
+ 
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
+                                <textarea class="form-control" id="mensagem" name="mensagem" rows="3" required></textarea>
+                            </div>
+ 
+                            <button class="btn btn-success w-100 ">
+                                <i class="bi bi-send me-2"></i>
+                                Enviar mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER Rodapé -->
+    <footer class="corNav text-white p-3 pt-4">
+
+        <div class="container">
+            <div class="row">
+                <div class="col col-md">
+                    <h5><i class="bi bi-flower1 me-2"></i>Verde Viva</h5>
+                    <p class="">Plantas & Jardinagem</p>
+                </div>
+                <div class="col col-md text-md-end">
+                    <p>Atendimento: Segunda a Sábado</p>
+                    <p>© 2026 VerdeViva - Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Para conectar ao bootstrap -->
+    <!-- Incluir Bootstrap JS --------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
