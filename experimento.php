@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste Básico</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste Básico</title>
-</head>
+    <body>
+        <?php
+        $nome = "Cloud";
 
-<body>
-    <?php
-    $nome = "Cloud";
-
-    $curso = "Gambiarra";
-
+        $curso = "Gambiarra";
 
 
 
 
 
 
-    echo "Olá, ".$nome."
 
-    ?>
+        echo "Olá, ".$nome."
 
-</body>
+        ?>
+
+    </body>
 
 </html>

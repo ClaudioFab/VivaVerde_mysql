@@ -46,6 +46,12 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#contatos">Contatos</a>
                     </li>
+
+                    <!-- Botão de Login ----------------------------------------------------------->
+                    <li>
+                        <a class="nav-link active fw-bold" href="login.php">Entrar</a>
+                    </li>
+                    <!-- --------------- ----------------------------------------------------------->
                 </ul>
             </div>
         </div>
@@ -429,7 +435,7 @@
                     <h2 class="mt-5 fw-bold">Entre em Contato</h2>
                     <p class="text-secondary">Envie sua dúvida para nossa equipe.</p>
                 </div>
- 
+
                 <div class="row justify-content-center tec">
                     <div class="col-12 col-md-6">
                         <form action="cadastroContato.php" method="POST">
@@ -448,19 +454,20 @@
                                 <input type="number" name="telefone" class="form-control" id="telefone"
                                     placeholder="(XX) XXXX-XXXX" required>
                             </div>
- 
+
                             <label for="exampleFormControlInput1" class="form-label">Dúvidas</label>
                             <select name="assunto" id="assunto" class="form-select">
                                 <option value="Produto">Dúvida sobre produto</option>
                                 <option value="Entrega">Entrega</option>
                                 <option value="Pagamento">Pagamento</option>
                             </select>
- 
+
                             <div class="mb-3">
                                 <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
-                                <textarea class="form-control" id="mensagem" name="mensagem" rows="3" required></textarea>
+                                <textarea class="form-control" id="mensagem" name="mensagem" rows="3"
+                                    required></textarea>
                             </div>
- 
+
                             <button class="btn btn-success w-100 ">
                                 <i class="bi bi-send me-2"></i>
                                 Enviar mensagem
