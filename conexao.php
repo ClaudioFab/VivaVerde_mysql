@@ -1,5 +1,5 @@
 <?php
-$conexao = mysqli_connect("localhost", "root", "", "VivaVerde",3307);
+$conexao = mysqli_connect("localhost", "root", "", "vivaverde",3307);
 
 if (!$conexao) {
     die("Erro ao conectar ao banco de dados.");
