@@ -49,15 +49,15 @@ $erro = isset($_GET["Erro!"]);
                             <input type="password" class="form-control" name="senha" required>
                         </div>
 
-                        <button type="submit" class="btn-solid theme-primary">Conectar</button>
+                        <button type="submit" class="btn btn-success theme-primary d-flex justify-content-center">Conectar</button>
+                        <br><br>
 
                     </form>
+                    <button class="btn btn-danger" onclick="window.location.href='index.html'">Voltar</button>
 
                 </div>
 
             </div>
-
-
 
         </section>
         <!-- ----------------------------------------------------------------------->

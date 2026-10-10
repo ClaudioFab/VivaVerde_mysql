@@ -12,13 +12,7 @@
 
         $curso = "Gambiarra";
 
-
-
-
-
-
-
-        echo "Olá, ".$nome."
+        echo "Olá, ".$nome;
 
         ?>
 
