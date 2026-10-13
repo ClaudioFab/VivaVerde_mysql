@@ -1,40 +1,60 @@
 <?php
 
-    session_start();
+// Inicia a sessão
+session_start();
 
-    if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-        header("Location: login.php");
-        exit;
-    }
-
-    $emai  = trim($_POST["email"] ?? "");
-    $senha = $_POST["senha"] ?? "";
-
-    require "conexao.php";
-
-    $stmt = mysqli_prepare($conexao, "SELECT idContato, nome, senha_hash FROM usuario where email = ? LIMIT 1");
-
-    mysqli_stmt_bind_param(
-        $stmt,
-        "s",
-        $email
-    );
-
-    $resultado = mysqli_stmt_get_result($stmt);
-
-    $usuario = mysqli_fetch_assoc($resultado);
-
-    if($usuario && password_verify($senha, $usuario["senha_hash"])){
-        session_regenerate_id(true);
-
-        $_SESSION["usuario_id"] = $usuario["idusuario"];
-        $_SESSION["usuario_nome"] = $usuario["nome"];
-        header("Location: login.php");
-        exit;
-
-    }
-
-    header("Location: login.php?erro=1");
+// Permite somente requisições POST
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    header("Location: login.php");
     exit;
+}
+
+// Recebe os dados do formulário
+$email = trim($_POST["email"] ?? "");
+$senha = $_POST["senha"] ?? "";
+
+// Importa a conexão com o banco
+require("conexao.php");
+
+// Consulta o usuário pelo e-mail
+$sql = "SELECT idUsuario, nome, senha_hash
+        FROM usuario
+        WHERE email = ?
+        LIMIT 1";
+
+// Prepara a consulta
+$stmt = mysqli_prepare($conexao, $sql);
+
+// Vincula o e-mail ao parâmetro
+mysqli_stmt_bind_param($stmt, "s", $email);
+
+// Executa a consulta
+mysqli_stmt_execute($stmt);
+
+// Obtém o resultado
+$resultado = mysqli_stmt_get_result($stmt);
+
+// Recupera o usuário encontrado
+$usuario = mysqli_fetch_assoc($resultado);
+
+// Verifica se o usuário existe e se a senha confere
+if ($usuario && password_verify($senha, $usuario["senha_hash"])) {
+
+    // Renova o identificador da sessão
+    session_regenerate_id(true);
+
+    // Armazena os dados na sessão
+    $_SESSION["usuario_id"] = $usuario["idUsuario"];
+    $_SESSION["usuario_nome"] = $usuario["nome"];
+
+    // Redireciona para o painel
+    header("Location: painel.php");
+    exit;
+
+}
+
+// Login incorreto
+header("Location: login.php?erro=1");
+exit;
 
 ?>

@@ -1,4 +1,5 @@
 <?php
+//Conecta ao banco de dados
 $conexao = mysqli_connect("localhost", "root", "", "vivaverde",3307);
 
 if (!$conexao) {

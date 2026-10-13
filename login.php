@@ -30,54 +30,45 @@ $erro = isset($_GET["Erro!"]);
 </head>
 
 <body>
-    <main>
-        <!-- Modal do login -------------------------------------------------------->
-        <section class="container ">
-            <div class="row">
-                <div class="col-6" justify-content: center;>
-                    <form action="autenticar.php" method="POST">
+    <main class="container min-vh-100 d-flex
+                 justify-content-center align-items-center">
+        <div class="card shadow-sm w-100" style="max-width: 420px;">
+            <div class="card-body p-4">
+                <h2 class="text-success mb-3">
+                    Acesso Administrativo
+                </h2>
 
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email</label>
-                            <input type="email" name="email" class="form-control" aria-describedby="emailHelp" required>
-                            <div id="emailHelp" class="form-text">Não compartilhamos esse bagulho.</div>
-                        </div>
+                <!-- Mostra erro se o login estiver incorreto -->
+                <?php if ($erro): ?>
 
+                    <div class="alert alert-danger">
+                        E-mail ou senha inválidos.
+                    </div>
+                <?php endif; ?>
 
-                        <div class="mb-3">
-                            <label class="form-label">Senha</label>
-                            <input type="password" class="form-control" name="senha" required>
-                        </div>
+                <div class="row ">
+                    <div class="col">
+                        <form action="autenticar.php" method="POST">
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="text" name="email" class="form-control" aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com mais ninguém.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Senha</label>
+                                <input type="password" class="form-control" name="senha">
+                            </div>
 
-                        <button type="submit" class="btn btn-success theme-primary d-flex justify-content-center">Conectar</button>
-                        <br><br>
-
-                    </form>
-                    <button class="btn btn-danger" onclick="window.location.href='index.html'">Voltar</button>
-
+                            <!-- Botão Entrar -->
+                            <button type="submit" class="btn btn-success w-100">
+                                Conectar
+                            </button>
+                        </form>
+                        <!-- Voltar ao site -->
+                        <button class="btn btn-danger d-block mt-3" onclick="window.location.href='index.html'">Voltar</button>
+                    </div>
                 </div>
-
             </div>
-
-        </section>
-        <!-- ----------------------------------------------------------------------->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     </main>
